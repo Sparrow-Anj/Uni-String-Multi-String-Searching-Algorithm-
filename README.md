@@ -84,11 +84,11 @@ The file **`metrics.pdf`** contains your complete performance comparison, includ
 * Same input across all algorithms
 * Clear evidence of how each algorithm scales
 
-## Complexity Comparison Table 
-''' 
-Algorithm      |	Best Case	| Average Case |	Worst Case | 	Notes
-Aho–Corasick      O(n)	      O(n)	          O(n + m)     	Best for multi‑pattern searches
-Z‑Function	      O(n)	      O(n)	          O(n)	        Great for pattern + text concat
-KMP              	O(n)	      O(n)           	O(n)	        Zero backtracking
-Brute Force	      O(n)	      O(n·m)	        O(n·m)	      Simple but slow
-''' 
+## Algorithmic Time Complexity Comparison 
+
+| Algorithm | Best Case | Average Case | Worst Case |
+|----------|-----------|--------------|------------|
+| Aho–Corasick | O(n) | O(n) | O(n + m) |
+| Z-Function   | O(n) | O(n) | O(n)     |
+| KMP          | O(n) | O(n) | O(n)     |
+| Brute Force  | O(n) | O(n·m) | O(n·m) |
