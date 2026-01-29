@@ -171,6 +171,7 @@ class AHO_CORASICK {
     }
 };
 
+// Constructing the vector of all patterns to look into the input source. These patterns are made in such a way they don't exist so that we can test the algorithm on extreme scenerios 
 std::vector<std::string> get_clean_vector(const string &source) {
     // 1. The forbidden input text
 
@@ -6177,19 +6178,16 @@ int main() {
         vector<string>str = get_clean_vector(input);
         auto start = chrono::high_resolution_clock::now();
 
-       // vector<string> str = {"ahocorasick"};
        AHO_CORASICK AC(str);
        AC.buildAutomaton();
 
+   // It contains the result for every index has a value 1 or 0 to represent whether the index occurs or not in an input 
     vector<int> result = AC.MonoExistingStr(input, str);
     auto end = chrono::high_resolution_clock::now();
 
     chrono::duration<double, milli> duration = end - start;
 
     cout << duration << endl;
-
-    cout << input.length() << endl;
-    cout << str.size() << endl;
-    cout << result[0] << endl;
+    
 }
-// 0.08 seconds .
+
